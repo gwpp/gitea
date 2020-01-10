@@ -1,0 +1,12 @@
+gitea:
+  container_name: gitea
+  image: gwpp/gitea:latest
+  privileged: false
+  restart: always
+  ports:
+    - 922:22
+    - 3000:3000
+  hostname: 'code.ganwenpeng.com'
+  volumes:
+    - /docker/gitea:/data
+  net: micro
